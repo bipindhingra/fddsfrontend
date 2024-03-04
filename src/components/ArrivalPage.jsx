@@ -59,7 +59,7 @@ function ArrivalPage() {
 
   useEffect(() => {
    function flightDataServer(){
-    const socket = new WebSocket('wss://puce-precious-oyster.cyclic.app');
+    const socket = new WebSocket('wss://fddsbackend.onrender.com/');
 
     socket.onopen = () => {
       console.log('Connected to WebSocket server');

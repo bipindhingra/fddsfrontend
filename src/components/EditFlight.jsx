@@ -67,7 +67,7 @@ function EditFlight() {
 
   useEffect(() => {
    function flightDataServer(){
-    const socket = new WebSocket('wss://puce-precious-oyster.cyclic.app');
+    const socket = new WebSocket('wss://fddsbackend.onrender.com');
 
     socket.onopen = () => {
       console.log('Connected to WebSocket server');
@@ -149,7 +149,7 @@ const handleEditButton = (index, item) => {
 
 const handleUpdateButton = async () => {
 
-  const response = await axios.patch(`https://puce-precious-oyster.cyclic.app/api/update/${flightid}/${updateETD}/${gateUpdate}/${remarkUpdate}/${delayMin}`);
+  const response = await axios.patch(`https://fddsbackend.onrender.com/api/update/${flightid}/${updateETD}/${gateUpdate}/${remarkUpdate}/${delayMin}`);
   console.log(response)
   console.log(delayUpadate);
   // Implement your update logic here

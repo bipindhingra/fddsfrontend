@@ -40,7 +40,7 @@ const UpdateForm = () => {
     
 
     const searchById = async () => {
-       const response = await axios.get(`https://flight-information-server.onrender.com/api/${flightId}`);
+       const response = await axios.get(`https://fddsfrontend.vercel.app/api/${flightId}`);
        setFlightData(response.data.ID);
        setFlightDestination(response.data.DESTINATION);
        setTime(response.data.STD);

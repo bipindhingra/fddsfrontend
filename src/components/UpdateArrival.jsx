@@ -63,7 +63,7 @@ const UpdateArrival = () => {
   
     useEffect(() => {
      function flightDataServer(){
-      const socket = new WebSocket('wss://flight-information-server.onrender.com');
+      const socket = new WebSocket('wss://fddsbackend.onrender.com');
   
       socket.onopen = () => {
         console.log('Connected to WebSocket server');
@@ -145,7 +145,7 @@ const UpdateArrival = () => {
   
   const handleUpdateButton = async () => {
   
-    const response = await axios.patch(`https://flight-information-server.onrender.com/api/update/${flightid}/${updateETD}/${gateUpdate}/${remarkUpdate}/${delayMin}`);
+    const response = await axios.patch(`https://fddsbackend.onrender.com/api/update/${flightid}/${updateETD}/${gateUpdate}/${remarkUpdate}/${delayMin}`);
     console.log(response)
     console.log(delayUpadate);
     // Implement your update logic here
